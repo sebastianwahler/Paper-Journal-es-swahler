@@ -9,7 +9,9 @@
 % so please use T1 fonts in your manuscript whenever possible.
 % Other font encondings may result in incorrect characters.
 %
+\usepackage{amssymb}
 \usepackage[outdir=./]{epstopdf}
+\setcounter{tocdepth}{3}
 \usepackage{graphicx}
 \usepackage[spanish,es-noshorthands]{babel}
 \graphicspath {{images/}}
@@ -19,6 +21,7 @@
 \usepackage{subfigure}
 \usepackage{soul}
 
+\usepackage{url}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -42,8 +45,6 @@
 %
 \section{Introducción}
 \input{Introduccion}
-%\section{Antecedentes}
-\input{Antecedentes}
 
 \section{Análisis de Redes Sociales (SNA)}
 \input{sna}
@@ -56,6 +57,10 @@
 
 \section{Identificación de posibles Bandas Delictivas}
 \input{identificacion-bandas}
+
+\section{PageRank y detecciones comunitarias}
+\input{pageRank}
+\input{detecciones-comunitarias}
 
 \section{Conclusiones y trabajos futuros}
 %\section{Trabajos futuros}

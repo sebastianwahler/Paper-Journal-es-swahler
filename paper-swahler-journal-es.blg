@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper-swahler-journal-es.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: splncs04.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Database file #1: bibliografia.bib
+Warning--empty journal in wasserman1994social
+You've used 43 entries,
+            2850 wiz_defined-function locations,
+            852 strings with 11551 characters,
+and the built_in function-call counts, 23982 in all, are:
+= -- 2025
+> -- 581
+< -- 64
++ -- 249
+- -- 198
+* -- 1497
+:= -- 2930
+add.period$ -- 45
+call.type$ -- 43
+change.case$ -- 228
+chr.to.int$ -- 0
+cite$ -- 44
+duplicate$ -- 2191
+empty$ -- 2203
+format.name$ -- 224
+if$ -- 5295
+int.to.chr$ -- 0
+int.to.str$ -- 43
+missing$ -- 418
+newline$ -- 135
+num.names$ -- 86
+pop$ -- 695
+preamble$ -- 1
+purify$ -- 182
+quote$ -- 0
+skip$ -- 763
+stack$ -- 0
+substring$ -- 1571
+swap$ -- 1344
+text.length$ -- 64
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 166
+warning$ -- 1
+while$ -- 225
+width$ -- 45
+write$ -- 426
+(There was 1 warning)
