@@ -52,3 +52,47 @@ Se puede apreciar a simple vista que ahora al tener peso las relaciones en la f�
 
 \subsubsection{Mejoras a PageRank - Peso a los nodos}
 
+Como se mencionó en el punto anterior, el algoritmo de PageRank en su versión original, no hace valorar en el algoritmo al peso de los enlaces (tema propuesto y resuelto con anterioridad), ni el peso de los nodos. Este último es otro punto muy importante a la hora de valorar a los individuos en los grafos resultantes, como así también a la hora de la evaluación de una supuesta banda delictiva.
+
+Es casi imposible evaluar y calificar de banda delictiva a individuos que tengan un bajo grado de relación entre sí, y que además cada uno tenga como antecedente penal un número pequeño de casos en su haber.
+
+Para ello, se procedió del mismo modo que con los pesos en los enlaces, a modificar la fórmula original de PageRank en pos de obtener un resultado más significativo y darle más importancia en el grafo a aquellos nodos que tengan más casos (más tamaño en el grafo), cuando se encuentren relacionados con otros con la misma cantidad de relaciones.
+
+No se encontró bibliografía dedicada que aporte datos para aplicar a la fórmula, por lo que se realizó  en base a lo ya estudiado una modificación propia. 
+
+Para comenzar con la ponderación del peso de los nodos, se identifica primero al nodo con mayor peso en el grafo, y luego sobre el resultado de la fórmula de PageRank se procede a sumar un nuevo valor empírico que surge de dividir el tamaño de cada nodo por el tamaño de mayor peso ya calculado, para luego multiplicarlo por el valor de PageRank anteriormente calculado. Cada nuevo valor de ranking sobre cada nodo es sobreescrito y pasa a ser el valor final. A continuación se detalla el algoritmo SQL de actualización.
+
+	\tiny{
+		\begin{verbatim}
+			DECLARE @NodeMax float
+			SELECT @NodeMax = MAX(n.nodeValue) FROM #Node n			
+			IF(@pesoEnNodos = 1)
+			BEGIN
+			UPDATE PR 
+			SET rank = rank + ( (#Node.nodeValue/@NodeMax) * rank )
+			FROM #PageRank PR
+			INNER JOIN #Node ON PR.id = #Node.id
+			end
+		\end{verbatim}
+	}
+
+En donde Node es la tabla de los Nodos, nodeValue es el peso de cada nodo, NodeMax se obtiene como el máximo valor de peso de la tabla de Nodos, y rank es el valor previo de PageRank. Al realizar el SET se produce la actualización de cada Ranking para cada nodo. 
+
+A continuación se muestra el mismo ejemplo de 6 nodos mostrado con anterioridad en donde se puede observar el resultado ponderando sólo los nodos.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.50\linewidth]{6nodos-pageRank-peso-nodos.png}
+	\caption{Resultado de ejecución de PageRank para 6 nodos con modificación en peso de Nodos.} 
+	\label{fig:6nodos-pageRank-peso-nodos}
+\end{figure}
+
+Por último se muestra el mismo ejemplo, pero ahora con ambas modificaciones aplicadas a la fórmula original de PageRank.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.50\linewidth]{6nodos-pageRank-peso-nodos-enlaces.png}
+	\caption{Resultado de ejecución de PageRank para 6 nodos con modificación WLRank y la modificacióon propia en peso de Nodos.} 
+	\label{fig:6nodos-pageRank-peso-nodos-enlaces}
+\end{figure}
+
