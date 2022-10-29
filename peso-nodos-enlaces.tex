@@ -8,11 +8,11 @@ La idea detrás de PageRank es que las "buenas" páginas hacen referencia a otra
 	PR(p) = \frac{q}{T} + (1 - q) \sum_{i} \frac{PR(r_i)}{L(r_i)} 
 \end{equation}
 
-donde T es el número total de páginas, q es la probabilidad de salir de la página p (en el trabajo original de PageRank se sugiere q = 0:15), ri son las páginas que apuntan a la página p, y L(ri) es el número de enlaces en la página ri. Estos valores se pueden usar como clasificación de páginas y se pueden calcular mediante un algoritmo iterativo que converge bastante rápido, ya que estamos interesados en el orden de clasificación en lugar de los valores de clasificación reales. El término q se denomina factor de amortiguamiento, ya que disminuye exponencialmente el spam de enlaces basado en secuencias de enlaces que regresan a una página.
+donde $T$ es el número total de páginas, $q$ es la probabilidad de salir de la página $p$ (en el trabajo original de PageRank se sugiere $q = 0:15$), $ri$ son las páginas que apuntan a la página $p$, y $L(ri)$ es el número de enlaces en la página $ri$. Estos valores se pueden usar como clasificación de páginas y se pueden calcular mediante un algoritmo iterativo que converge bastante rápido, ya que estamos interesados en el orden de clasificación en lugar de los valores reales. El término $q$ se denomina factor de amortiguamiento, ya que disminuye exponencialmente el spam de enlaces basado en secuencias de enlaces que regresan a una página.
 
 De aquí surge una variante al algoritmo de PageRank original de Google, llamada WLRank propuesta en el trabajo de Ri Baeza-Yates y Emilio Davies \cite{baeza2004web}.
 
-WLRank (Weighted Links Rank) asigna el valor de clasificación R(i) a la página i usando las siguientes ecuaciones:
+WLRank (Weighted Links Rank) asigna el valor de clasificación $R(i)$ a la página $i$ usando las siguientes ecuaciones:
 
 \begin{equation} 
 	\label{eqn:ecuacionWLRank2} 
@@ -24,15 +24,15 @@ WLRank (Weighted Links Rank) asigna el valor de clasificación R(i) a la página
 	W(j,i) = L(j,i)(c+T(j,i)+AL(j,i)+RP(j,i))
 \end{equation}
 
-donde dado un enlace de la página j a la página i se tiene:
+donde dado un enlace de la página $j$ a la página $i$ se tiene:
 
-L(j; i) es 1 si el enlace existe, o 0 en caso contrario, y c es una constante que da un peso base a cada enlace,
-T(j; i) es un valor que depende de la etiqueta donde se inserta el enlace,
-AL(j;i) es la longitud del texto "ancla" del enlace dividida por una constante d que depende que estima la longitud promedio del texto ancla en caracteres, y RP(j;i) es la posición relativa del enlace en la página ponderado por una constante b.
+$L(j; i)$ es $1$ si el enlace existe, o $0$ en caso contrario, y c es una constante que da un peso base a cada enlace,
+$T(j; i)$ es un valor que depende de la etiqueta donde se inserta el enlace,
+$AL(j;i)$ es la longitud del texto "ancla" del enlace dividida por una constante d que depende que estima la longitud promedio del texto ancla en caracteres, y $RP(j;i)$ es la posición relativa del enlace en la página ponderado por una constante b.
 
-Al igual que en PageRank, R(i) corresponde a la probabilidad de llegar a la página i mientras navega por la Web. Si W(j; i) = L(j; i) tenemos el PageRank original. Los cambios se explican a continuación. El término T(j; i) es una secuencia de constantes dependiendo de la etiqueta donde se encuentre el enlace. Por ejemplo, si el enlace está dentro de una etiqueta <h1>, tendrá un valor alto de T(j; i), un poco menos para <h2>, etc. Lo mismo para otras etiquetas de énfasis como <strong> o <b> .
+Al igual que en PageRank, $R(i)$ corresponde a la probabilidad de llegar a la página $i$ mientras navega por la Web. Si $W(j; i) = L(j; i)$ tenemos el PageRank original. Los cambios se explican a continuación. El término $T(j; i)$ es una secuencia de constantes dependiendo de la etiqueta donde se encuentre el enlace. Por ejemplo, si el enlace está dentro de una etiqueta $<h1>$, tendrá un valor alto de $T(j; i)$, un poco menos para $<h2>$, etc. Lo mismo para otras etiquetas de énfasis como $<strong>$ o $<b>$ .
 
-El término AL(j;i) da más valor a los enlaces en los que el creador explica con más detalle a qué recurso Web se está enlazando. Por ejemplo, esto le da menos peso a los enlaces descritos con home o aquí. Finalmente, el término RP(j; i) da más peso a los enlaces que están al principio de la página que al final de la página (físicamente en el código HTML, no necesariamente en la vista del navegador).
+El término $AL(j;i)$ da más valor a los enlaces en los que el creador explica con más detalle a qué recurso Web se está enlazando. Por ejemplo, esto le da menos peso a los enlaces descritos con home o aquí. Finalmente, el término $RP(j; i)$ da más peso a los enlaces que están al principio de la página que al final de la página (físicamente en el código HTML, no necesariamente en la vista del navegador).
 
 Gracias a esta mejora sobre la fórmula original de PageRank es posible entonces darle mayor consideración en la fórmula a aquellos enlaces que tienen más pesos que otros.
 
@@ -47,12 +47,11 @@ A continuación se muestra el ejemplo de 6 nodos mostrado con anterioridad en do
 	\label{fig:6nodos-pageRank-peso-enlaces}
 \end{figure}
 
-Se puede apreciar a simple vista que ahora al tener peso las relaciones en la fórmula el resultado es mucho más preciso, existen muchos casos en cómun entre 145262 y 116587, lo que justifica la modificación en el ranking general. El nodo 
-145262 tiene 1 caso en cómún con 132310 y 18 con 116587, un total de 19 relaciones a ese nodo. Por otra parte el nodo que quedó en segunda posicición en el ranking (145053), tiene un total de 15 enlaces provenientes de 13 casos en común con el nodo 129137 y de 1 caso en cómun con el nodo 116587 y con el nodo 123109.
+Se puede apreciar a simple vista que ahora al tener peso las relaciones en la fórmula el resultado es mucho más preciso, existen muchos casos en cómun entre $145262$ y $116587$, lo que justifica la modificación en el ranking general. El nodo $145262$ tiene $1$ caso en cómún con $132310$ y $18$ con $116587$, un total de $19$ relaciones a ese nodo. Por otra parte el nodo que quedó en segunda posición en el ranking ($145053$), tiene un total de $15$ enlaces provenientes de $13$ casos en común con el nodo $129137$ y de $1$ caso en cómun con el nodo $116587$ y con el nodo $123109$.
 
 \subsubsection{Mejoras a PageRank - Peso a los nodos}
 
-Como se mencionó en el punto anterior, el algoritmo de PageRank en su versión original, no hace valorar al peso de los enlaces (tema propuesto y resuelto con anterioridad), ni el peso de los nodos. Este último es otro punto muy importante a la hora de valorar a los individuos en los grafos resultantes, como así también a la hora de la evaluación de una supuesta banda delictiva.
+Como se mencionó en el punto anterior, el algoritmo de PageRank en su versión original, no hace valorar al peso de los enlaces (tema propuesto y resuelto con anterioridad), ni el peso de los nodos. Este último es otro punto muy importante a la hora de evaluar a los individuos en los grafos resultantes, como así también a la hora del posible descubrimiento de una supuesta banda delictiva.
 
 Es casi imposible evaluar y calificar de banda delictiva a individuos que tengan un bajo grado de relación entre sí, y que además cada uno tenga como antecedente penal un número pequeño de casos en su haber.
 
@@ -76,7 +75,7 @@ Para comenzar con la ponderación del peso de los nodos, se identifica primero a
 		\end{verbatim}
 	}
 
-En donde Node es la tabla de los Nodos, nodeValue es el peso de cada nodo, NodeMax se obtiene como el máximo valor de peso de la tabla de Nodos, y rank es el valor previo de PageRank. Al realizar el SET se produce la actualización de cada Ranking para cada nodo. 
+En donde $Node$ es la tabla de los Nodos, $nodeValue$ es el peso de cada nodo, $NodeMax$ se obtiene como el máximo valor de peso de la tabla de Nodos, y $rank$ es el valor previo de PageRank. Al realizar el $SET$ se produce la actualización de cada Ranking para cada nodo. 
 
 A continuación se muestra el mismo ejemplo de 6 nodos mostrado con anterioridad en donde se puede observar el resultado ponderando sólo los nodos.
 
