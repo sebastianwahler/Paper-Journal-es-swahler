@@ -55,12 +55,13 @@ Como se mencionó en el punto anterior, el algoritmo de PageRank en su versión 
 
 Es casi imposible evaluar y calificar de banda delictiva a individuos que tengan un bajo grado de relación entre sí, y que además cada uno tenga como antecedente penal un número pequeño de casos en su haber.
 
-Para ello, se procedió del mismo modo que con los pesos en los enlaces, a modificar la fórmula original de PageRank en pos de obtener un resultado más significativo y darle más importancia en el grafo a aquellos nodos que tengan más casos (más tamaño en el grafo), cuando se encuentren relacionados con otros con la misma cantidad de relaciones.
+Para ello, se procedió del mismo modo que con los pesos en los enlaces, a modificar la fórmula original de PageRank en pos de obtener un resultado más significativo y darle más importancia en el grafo a aquellos nodos que tengan más casos (más tamaño en el grafo), cuando se encuentren relacionados con otros con la misma cantidad de relaciones. El objetivo principal de dicha modificación es generar un desempate de valor de ranking para aquellos nodos que en el algoritmo original de pagerank obtengan igual puntaje. Ante una situación de igualdad de ranking, el nodo que tenga un mayor tamaño quedará con un mayor valor ponderado.
 
 No se encontró bibliografía dedicada que aporte datos para aplicar a la fórmula, por lo que se realizó  en base a lo ya estudiado una modificación propia. 
 
 Para comenzar con la ponderación del peso de los nodos, se identifica primero al nodo con mayor peso en el grafo, y luego sobre el resultado de la fórmula de PageRank se procede a sumar un nuevo valor empírico que surge de dividir el tamaño de cada nodo por el tamaño de mayor peso ya calculado, para luego multiplicarlo por el valor de PageRank anteriormente calculado. Cada nuevo valor de ranking sobre cada nodo es sobreescrito y pasa a ser el valor final. A continuación se detalla el algoritmo SQL de actualización.
 
+\begin{scriptsize}{1}
 	\tiny{
 		\begin{verbatim}
 			DECLARE @NodeMax float
@@ -74,6 +75,8 @@ Para comenzar con la ponderación del peso de los nodos, se identifica primero a
 			end
 		\end{verbatim}
 	}
+\end{scriptsize}
+
 
 En donde $Node$ es la tabla de los Nodos, $nodeValue$ es el peso de cada nodo, $NodeMax$ se obtiene como el máximo valor de peso de la tabla de Nodos, y $rank$ es el valor previo de PageRank. Al realizar el $SET$ se produce la actualización de cada Ranking para cada nodo. 
 
@@ -86,12 +89,14 @@ A continuación se muestra el mismo ejemplo de 6 nodos mostrado con anterioridad
 	\label{fig:6nodos-pageRank-peso-nodos}
 \end{figure}
 
+En el mismo es posible observar comparando la ejecución de PageRank, que mantiene el resultado principal de la fórmula original, pero para los casos de nodos con "empate" de ranking, ahora ponderará con mayor valor al que posea un peso mayor. Los nodos $129137$ y $123109$ que en el algortimo original compartían el quinto lugar en el ranking, ahora pueden diferenciarse por su tamaño (cantidad de casos penales de cada persona). El nodo $123109$ posee $68 casos penales$ asociados, quedando en quinto lugar, mientras que el nodo $129137$ se encuentra vinculado a $47 casos penales$, por lo que queda relegado al sexto lugar en el ranking de este grafo.
+
 Por último se muestra el mismo ejemplo, pero ahora con ambas modificaciones aplicadas a la fórmula original de PageRank.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.50\linewidth]{6nodos-pageRank-peso-nodos-enlaces.png}
-	\caption{Resultado de ejecución de PageRank para 6 nodos con modificación WLRank y la modificacióon propia en peso de Nodos.} 
+	\caption{Resultado de ejecución de PageRank para 6 nodos con modificación WLRank y la modificación propia en peso de Nodos.} 
 	\label{fig:6nodos-pageRank-peso-nodos-enlaces}
 \end{figure}
 

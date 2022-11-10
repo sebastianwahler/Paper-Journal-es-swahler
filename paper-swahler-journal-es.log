@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.21)  29 OCT 2022 20:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.21)  10 NOV 2022 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,24 +907,26 @@ LaTeX Info: Redefining \% on input line 59.
 File: images//6nodos-pageRank-peso-nodos.png Graphic file (type png)
 <use images//6nodos-pageRank-peso-nodos.png>
 Package pdftex.def Info: images//6nodos-pageRank-peso-nodos.png  used on input 
-line 84.
+line 87.
 (pdftex.def)             Requested size: 173.56177pt x 79.54865pt.
-<images//6nodos-pageRank-peso-nodos-enlaces.png, id=95, 547.04375pt x 262.48062
-pt>
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+ [19 <./images//6nodos-pageRank-peso-nodos.png>]
+<images//6nodos-pageRank-peso-nodos-enlaces.png, id=101, 547.04375pt x 262.4806
+2pt>
 File: images//6nodos-pageRank-peso-nodos-enlaces.png Graphic file (type png)
 <use images//6nodos-pageRank-peso-nodos-enlaces.png>
 Package pdftex.def Info: images//6nodos-pageRank-peso-nodos-enlaces.png  used o
-n input line 93.
+n input line 98.
 (pdftex.def)             Requested size: 173.56177pt x 83.2786pt.
-) (conclusion.tex)
-(trabajo-futuro.tex)
+) (conclusion.tex) (trabajo-futuro.tex)
 LaTeX Info: Redefining \. on input line 72.
 LaTeX Info: Redefining \% on input line 72.
- [19 <./images//6nodos-pageRank-peso-nodos.png>]
-(paper-swahler-journal-es.bbl
-LaTeX Info: Redefining \. on input line 60.
-LaTeX Info: Redefining \% on input line 60.
- [20 <./images//6nodos-pageRank-peso-nodos-enlaces.png>]
+ [20 <./images//6nodos-pageRank-peso-nodos-enlaces.png>] (paper-swahler-journal
+-es.bbl
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+ [21]
 Underfull \hbox (badness 4739) in paragraph at lines 95--97
 []\T1/cmr/m/n/9 Jornada, D.: Ca-so de es-tu-dio real. $\T1/cmtt/m/n/9 https : /
  / www . diariojornada . com . ar /
@@ -936,12 +938,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--97
  _ de _ los _ LCD _ que _ fue _
  []
 
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
-[21])
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+[22])
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
- [22] (paper-swahler-journal-es.aux
+ [23] (paper-swahler-journal-es.aux
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
 )
@@ -950,41 +952,39 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16190 strings out of 478582
- 328760 string characters out of 2843400
+ 16191 strings out of 478582
+ 328772 string characters out of 2843400
  592531 words of memory out of 3000000
- 33986 multiletter control sequences out of 15000+600000
- 483973 words of font info for 64 fonts, out of 8000000 for 9000
+ 33987 multiletter control sequences out of 15000+600000
+ 484054 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,94p,2283b,468s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,10n,94p,2283b,464s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-ti0500.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecrm0500.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\tcrm1000.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi375\ectt0800.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\swahler\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\swahler\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\swahler\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sw
-ahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\
-Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.
+rm0700.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\tcrm1000.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi375\ectt0800.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\swahler\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\swahler\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\swahler\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\sw
+ahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\
+Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.
 pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-ctt0900.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecrm0900.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm1000.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/swahler/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/swahler/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/swahler/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/sw
-ahler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C
-:/Users/swahler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Users/swahler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr6.pfb><C:/Users/swahler/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb><C:/Users/swahler/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on paper-swahler-journal-es.pdf (22 pages, 3425276 bytes).
+crm0900.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecrm1000.pk> <C:\Users\swahler\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx1440.pk><C:/Users/swahler/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/swahler/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/swahler/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/swahler/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+swahler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+C:/Users/swahler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Users/swahler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb>
+Output written on paper-swahler-journal-es.pdf (23 pages, 3397094 bytes).
 PDF statistics:
- 734 PDF objects out of 1000 (max. 8388607)
+ 659 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
