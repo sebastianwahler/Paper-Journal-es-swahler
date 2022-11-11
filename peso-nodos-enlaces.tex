@@ -38,7 +38,7 @@ Gracias a esta mejora sobre la fórmula original de PageRank es posible entonces
 
 Se procedió a adecuar nuestra fórmula de modo de contemplar los pesos en los enlaces y de esta forma realizar ciertas pruebas simples que comprueben que la modificación realizada consigue ajustar a nuestro modelo en una mejora respecto al algoritmo de PageRank original.
 
-A continuación se muestra el ejemplo de 6 nodos mostrado con anterioridad en donde se puede observar el resultado ponderando los enlaces.
+A continuación en la Figura \ref{fig:6nodos-pageRank-peso-enlaces} se muestra el ejemplo de 6 nodos mostrado con anterioridad en donde se puede observar el resultado ponderando los enlaces.
 
 \begin{figure}
 	\centering
@@ -80,7 +80,7 @@ Para comenzar con la ponderación del peso de los nodos, se identifica primero a
 
 En donde $Node$ es la tabla de los Nodos, $nodeValue$ es el peso de cada nodo, $NodeMax$ se obtiene como el máximo valor de peso de la tabla de Nodos, y $rank$ es el valor previo de PageRank. Al realizar el $SET$ se produce la actualización de cada Ranking para cada nodo. 
 
-A continuación se muestra el mismo ejemplo de 6 nodos mostrado con anterioridad en donde se puede observar el resultado ponderando sólo los nodos.
+A continuación se muestra en la Figura \ref{fig:6nodos-pageRank-peso-nodos} el mismo ejemplo de 6 nodos mostrado con anterioridad en donde se puede observar el resultado ponderando sólo los nodos.
 
 \begin{figure}
 	\centering
@@ -91,7 +91,7 @@ A continuación se muestra el mismo ejemplo de 6 nodos mostrado con anterioridad
 
 En el mismo es posible observar comparando la ejecución de PageRank, que mantiene el resultado principal de la fórmula original, pero para los casos de nodos con "empate" de ranking, ahora ponderará con mayor valor al que posea un peso mayor. Los nodos $129137$ y $123109$ que en el algortimo original compartían el quinto lugar en el ranking, ahora pueden diferenciarse por su tamaño (cantidad de casos penales de cada persona). El nodo $123109$ posee $68 casos penales$ asociados, quedando en quinto lugar, mientras que el nodo $129137$ se encuentra vinculado a $47 casos penales$, por lo que queda relegado al sexto lugar en el ranking de este grafo.
 
-Por último se muestra el mismo ejemplo, pero ahora con ambas modificaciones aplicadas a la fórmula original de PageRank.
+Por último se muestra en la Figura \ref{fig:6nodos-pageRank-peso-nodos-enlaces} el mismo ejemplo, pero ahora con ambas modificaciones aplicadas a la fórmula original de PageRank.
 
 \begin{figure}
 	\centering
